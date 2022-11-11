@@ -1,0 +1,25 @@
+// this need to set on process.env
+process.env.NODE_ENV = 'development';
+
+module.exports = {
+  NODE_ENV: process.env.NODE_ENV,
+  JWT_SECRET_KEY: 'secret',
+  JWT_EXPIRY_KEY: '60m',
+  server: {
+    port: 3100,
+  },
+  src: {
+    root: 'src',
+    fileExtension: 'ts',
+  },
+  elasticsearch: {
+    node: 'http://localhost:9200',
+    auth: {
+      username: 'elastic',
+      password: 'password',
+    },
+  },
+  security: {
+    enableHttpsRedirect: false,
+  }
+};
